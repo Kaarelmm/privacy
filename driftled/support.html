@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Learn how DriftLed handles your information and protects your privacy.">
+    <meta name="description" content="Get help with the DriftLed mobile controller, connections, demo mode, and compatible DriftLed hardware.">
     <meta name="color-scheme" content="light">
     <meta name="theme-color" content="#f6f4ef">
-    <title>Privacy Policy — DriftLed</title>
+    <title>Support — DriftLed</title>
     <style>
         :root {
             --ink: #17201d;
@@ -170,7 +170,7 @@
             line-height: 1.6;
         }
 
-        .effective-date {
+        .availability {
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -184,7 +184,7 @@
             font-weight: 650;
         }
 
-        .effective-date::before {
+        .availability::before {
             width: 7px;
             height: 7px;
             content: "";
@@ -220,7 +220,7 @@
             text-transform: uppercase;
         }
 
-        .toc ol {
+        .toc ul {
             margin: 0;
             padding: 0;
             list-style: none;
@@ -243,7 +243,7 @@
             color: var(--green);
         }
 
-        .policy {
+        .support-card {
             overflow: hidden;
             border: 1px solid rgba(223, 228, 223, 0.9);
             border-radius: 24px;
@@ -251,13 +251,13 @@
             box-shadow: var(--shadow);
         }
 
-        .summary {
+        .contact-hero {
             padding: clamp(28px, 6vw, 52px);
             color: #fff;
             background: var(--green-dark);
         }
 
-        .summary-label {
+        .contact-label {
             margin: 0 0 11px;
             color: #bcd8cc;
             font-size: 12px;
@@ -266,69 +266,47 @@
             text-transform: uppercase;
         }
 
-        .summary h2 {
-            margin: 0 0 26px;
+        .contact-hero h2 {
+            max-width: 540px;
+            margin: 0 0 16px;
             font-size: clamp(27px, 4vw, 38px);
             font-weight: 500;
             line-height: 1.2;
         }
 
-        .summary-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 14px;
-        }
-
-        .summary-item {
-            min-height: 132px;
-            padding: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.14);
-            border-radius: 14px;
-            background: rgba(255, 255, 255, 0.06);
-        }
-
-        .summary-number {
-            display: block;
-            margin-bottom: 28px;
-            color: var(--amber);
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 16px;
-            font-style: italic;
-        }
-
-        .summary-item p {
+        .contact-hero p {
+            max-width: 610px;
             margin: 0;
-            color: #eff6f2;
-            font-size: 14px;
-            font-weight: 650;
-            line-height: 1.45;
+            color: #d9e8e1;
         }
 
-        .policy-body {
+        .email-button {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 28px;
+            padding: 12px 18px;
+            border-radius: 999px;
+            color: var(--green-dark);
+            background: #fff;
+            font-size: 14px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .email-button:hover {
+            color: var(--green-dark);
+            background: var(--green-soft);
+        }
+
+        .support-body {
             padding: clamp(32px, 7vw, 64px);
         }
 
-        .intro {
-            margin: 0 0 48px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid var(--line);
-            color: #37423e;
-            font-size: 19px;
-        }
-
-        .intro p {
-            margin: 0;
-        }
-
-        .intro p + p {
-            margin-top: 16px;
-        }
-
-        .policy-section {
+        .support-section {
             scroll-margin-top: 32px;
         }
 
-        .policy-section + .policy-section {
+        .support-section + .support-section {
             margin-top: 48px;
             padding-top: 48px;
             border-top: 1px solid var(--line);
@@ -352,24 +330,52 @@
             line-height: 1.22;
         }
 
-        .policy-section p {
+        .support-section > p {
             margin: 0;
             color: #44504b;
         }
 
-        .policy-section p + p {
+        .support-section > p + p {
             margin-top: 16px;
         }
 
-        .policy-section ul {
-            margin: 22px 0 0;
+        .steps,
+        .checklist {
+            margin: 24px 0 0;
             padding: 0;
             display: grid;
-            gap: 10px;
+            gap: 12px;
             list-style: none;
+            counter-reset: steps;
         }
 
-        .policy-section li {
+        .steps li {
+            position: relative;
+            min-height: 64px;
+            padding: 18px 18px 18px 62px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            color: #34403b;
+            counter-increment: steps;
+        }
+
+        .steps li::before {
+            position: absolute;
+            top: 16px;
+            left: 17px;
+            width: 31px;
+            height: 31px;
+            display: grid;
+            place-items: center;
+            content: counter(steps);
+            border-radius: 50%;
+            color: var(--green-dark);
+            background: var(--green-soft);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .checklist li {
             position: relative;
             padding: 13px 16px 13px 43px;
             border-radius: 10px;
@@ -377,7 +383,7 @@
             color: #34403b;
         }
 
-        .policy-section li::before {
+        .checklist li::before {
             position: absolute;
             top: 18px;
             left: 17px;
@@ -389,18 +395,19 @@
             transform: rotate(-45deg);
         }
 
-        .contact-card {
-            padding: 28px;
+        .privacy-card {
+            padding: 26px 28px;
             border-radius: 16px;
             background: var(--green-soft);
         }
 
-        .contact-card p {
+        .privacy-card p {
+            margin: 0;
             color: var(--ink);
         }
 
-        .contact-card a {
-            font-weight: 700;
+        .privacy-card a {
+            font-weight: 750;
         }
 
         footer {
@@ -434,22 +441,10 @@
                 position: static;
             }
 
-            .toc ol {
+            .toc ul {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 4px 16px;
-            }
-
-            .summary-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .summary-item {
-                min-height: auto;
-            }
-
-            .summary-number {
-                margin-bottom: 10px;
             }
         }
 
@@ -486,20 +481,20 @@
                 padding: 20px;
             }
 
-            .toc ol {
+            .toc ul {
                 grid-template-columns: 1fr;
             }
 
-            .policy {
+            .support-card {
                 border-radius: 18px;
             }
 
-            .policy-body,
-            .summary {
+            .support-body,
+            .contact-hero {
                 padding: 28px 22px;
             }
 
-            .policy-section + .policy-section {
+            .support-section + .support-section {
                 margin-top: 38px;
                 padding-top: 38px;
             }
@@ -543,23 +538,23 @@
                 margin-left: 0;
             }
 
-            .policy {
+            .support-card {
                 border: 0;
                 box-shadow: none;
             }
 
-            .summary {
+            .contact-hero {
                 color: var(--ink);
                 background: #fff;
                 border: 1px solid var(--line);
             }
 
-            .summary-label,
-            .summary-item p {
+            .contact-label,
+            .contact-hero p {
                 color: var(--ink);
             }
 
-            .policy-section {
+            .support-section {
                 break-inside: avoid;
             }
         }
@@ -572,138 +567,69 @@
             <span>DriftLed</span>
         </a>
         <nav class="site-nav" aria-label="Main navigation">
-            <a href="./" aria-current="page">Privacy</a>
-            <a href="./support.html">Support</a>
+            <a href="./">Privacy</a>
+            <a href="./support.html" aria-current="page">Support</a>
         </nav>
     </header>
 
     <main>
         <header class="hero">
-            <p class="eyebrow">Your privacy, plainly explained</p>
-            <h1>Privacy Policy</h1>
-            <p class="hero-copy">DriftLed connects your device to your race-start controller. Your data stays where it belongs: with you.</p>
-            <p class="effective-date">Effective July 27, 2026</p>
+            <p class="eyebrow">Help when you need it</p>
+            <h1>DriftLed Support</h1>
+            <p class="hero-copy">Get help with the DriftLed mobile controller, connection setup, or compatible race-start LED hardware.</p>
+            <p class="availability">Support by email</p>
         </header>
 
         <div class="page-shell">
-            <nav class="toc" aria-label="Privacy policy contents">
+            <nav class="toc" aria-label="Support page contents">
                 <p class="toc-title">On this page</p>
-                <ol>
-                    <li><a href="#information-we-collect">Information we collect</a></li>
-                    <li><a href="#stored-on-device">Stored on your device</a></li>
-                    <li><a href="#hardware-communication">Hardware communication</a></li>
-                    <li><a href="#permissions">Permissions</a></li>
-                    <li><a href="#sharing">User-directed sharing</a></li>
-                    <li><a href="#retention">Retention &amp; deletion</a></li>
-                    <li><a href="#third-parties">Third-party services</a></li>
-                    <li><a href="#children">Children’s privacy</a></li>
-                    <li><a href="#changes">Policy changes</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ol>
+                <ul>
+                    <li><a href="#contact">Getting help</a></li>
+                    <li><a href="#demo-mode">Testing without hardware</a></li>
+                    <li><a href="#connections">Connection checklist</a></li>
+                    <li><a href="#privacy">Privacy</a></li>
+                </ul>
             </nav>
 
-            <article class="policy">
-                <section class="summary" aria-labelledby="summary-heading">
-                    <p class="summary-label">Privacy at a glance</p>
-                    <h2 id="summary-heading">Simple by design.</h2>
-                    <div class="summary-grid">
-                        <div class="summary-item">
-                            <span class="summary-number">01</span>
-                            <p>No account, advertising, analytics, or tracking.</p>
-                        </div>
-                        <div class="summary-item">
-                            <span class="summary-number">02</span>
-                            <p>Your preferences stay locally on your device.</p>
-                        </div>
-                        <div class="summary-item">
-                            <span class="summary-number">03</span>
-                            <p>Controller traffic never passes through our servers.</p>
-                        </div>
-                    </div>
+            <article class="support-card">
+                <section class="contact-hero" id="contact" aria-labelledby="contact-heading">
+                    <p class="contact-label">Technical support</p>
+                    <h2 id="contact-heading">Tell us what’s happening.</h2>
+                    <p>For connection problems, technical support, feedback, or feature requests, contact Kaarel-Martin Maarand.</p>
+                    <a class="email-button" href="mailto:kaarel@driftpoint.net?subject=DriftLed%20Support">kaarel@driftpoint.net</a>
                 </section>
 
-                <div class="policy-body">
-                    <div class="intro">
-                        <p>DriftLed is developed by <strong>Code Solutions OÜ</strong>.</p>
-                        <p>DriftLed is designed to control a compatible DriftLed race-start LED controller over Bluetooth or a local Wi-Fi connection.</p>
-                    </div>
-
-                    <section class="policy-section" id="information-we-collect">
-                        <span class="section-kicker">01 — Collection</span>
-                        <h2>Information we collect</h2>
-                        <p>DriftLed does not collect, transmit to the developer, sell, or share personal information.</p>
-                        <p>The app does not require an account or login and does not contain advertising, analytics, or tracking services.</p>
+                <div class="support-body">
+                    <section class="support-section" id="demo-mode">
+                        <span class="section-kicker">01 — Explore the app</span>
+                        <h2>Testing without hardware</h2>
+                        <p>You can explore DriftLed even when a controller is not nearby.</p>
+                        <ol class="steps">
+                            <li>Open <strong>Settings</strong> in the DriftLed app.</li>
+                            <li>Scroll to the <strong>System</strong> section.</li>
+                            <li>Enable <strong>Demo mode</strong>.</li>
+                        </ol>
                     </section>
 
-                    <section class="policy-section" id="stored-on-device">
-                        <span class="section-kicker">02 — Local data</span>
-                        <h2>Information stored on your device</h2>
-                        <p>DriftLed stores certain settings locally on your device, including:</p>
-                        <ul>
-                            <li>The selected connection method</li>
-                            <li>A Bluetooth authentication secret</li>
-                            <li>Manual LED-screen designs</li>
-                            <li>Theme and language preferences</li>
-                            <li>Demo-mode preference</li>
+                    <section class="support-section" id="connections">
+                        <span class="section-kicker">02 — Troubleshooting</span>
+                        <h2>Connection checklist</h2>
+                        <p>If DriftLed cannot find or connect to your controller, try these quick checks first:</p>
+                        <ul class="checklist">
+                            <li>Make sure the DriftLed controller is powered on and nearby.</li>
+                            <li>Confirm that Bluetooth access is enabled for DriftLed.</li>
+                            <li>For Wi-Fi connections, allow Local Network access on Apple devices.</li>
+                            <li>Check that your device is connected to the controller’s local Wi-Fi network.</li>
+                            <li>Close and reopen the app, then try connecting again.</li>
                         </ul>
-                        <p>This information remains on your device and is not transmitted to the developer.</p>
+                        <p>If the problem continues, email us and include your device model, operating-system version, connection method, and a short description of what you see.</p>
                     </section>
 
-                    <section class="policy-section" id="hardware-communication">
-                        <span class="section-kicker">03 — Connections</span>
-                        <h2>Communication with DriftLed hardware</h2>
-                        <p>When connected to a DriftLed controller, the app sends commands, configuration settings, display text, and authentication information directly to that controller over Bluetooth or the controller’s local Wi-Fi network.</p>
-                        <p>These communications do not pass through developer-operated servers or cloud services. The developer cannot access the information exchanged between the app and the controller.</p>
-                    </section>
-
-                    <section class="policy-section" id="permissions">
-                        <span class="section-kicker">04 — Device access</span>
-                        <h2>Bluetooth and local network access</h2>
-                        <p>DriftLed requests Bluetooth access to discover and communicate with compatible DriftLed controllers.</p>
-                        <p>On Apple devices, the app may request Local Network access to communicate with a controller over its private Wi-Fi network.</p>
-                        <p>These permissions are used only for communicating with DriftLed hardware. They are not used for tracking or determining your physical location.</p>
-                    </section>
-
-                    <section class="policy-section" id="sharing">
-                        <span class="section-kicker">05 — Your choice</span>
-                        <h2>User-directed sharing</h2>
-                        <p>The app allows users to share a Bluetooth authentication secret using the device’s system share sheet. Sharing occurs only when initiated by the user and is handled by the service selected by the user. DriftLed and its developer do not receive the shared information.</p>
-                    </section>
-
-                    <section class="policy-section" id="retention">
-                        <span class="section-kicker">06 — Your controls</span>
-                        <h2>Data retention and deletion</h2>
-                        <p>Locally stored app information remains on the device until it is changed, the app’s data is cleared, or the app is uninstalled.</p>
-                        <p>Settings stored on a DriftLed controller remain on that controller until they are changed or the controller is reset.</p>
-                    </section>
-
-                    <section class="policy-section" id="third-parties">
-                        <span class="section-kicker">07 — Other providers</span>
-                        <h2>Third-party services</h2>
-                        <p>DriftLed does not include third-party advertising, analytics, or tracking services.</p>
-                        <p>Apple, Google, the device operating system, or a service selected through the system share sheet may process information under their own privacy policies.</p>
-                    </section>
-
-                    <section class="policy-section" id="children">
-                        <span class="section-kicker">08 — Minors</span>
-                        <h2>Children’s privacy</h2>
-                        <p>DriftLed is not directed toward children and does not knowingly collect personal information from children.</p>
-                    </section>
-
-                    <section class="policy-section" id="changes">
-                        <span class="section-kicker">09 — Updates</span>
-                        <h2>Changes to this policy</h2>
-                        <p>This policy may be updated if DriftLed’s functionality or data practices change. Updates will be published at this URL with a revised effective date.</p>
-                    </section>
-
-                    <section class="policy-section" id="contact">
-                        <span class="section-kicker">10 — Get in touch</span>
-                        <h2>Contact</h2>
-                        <div class="contact-card">
-                            <p>
-                                <strong>Code Solutions OÜ</strong><br>
-                                <a href="mailto:kaarel@driftpoint.net">kaarel@driftpoint.net</a>
-                            </p>
+                    <section class="support-section" id="privacy">
+                        <span class="section-kicker">03 — Your data</span>
+                        <h2>Privacy</h2>
+                        <div class="privacy-card">
+                            <p>DriftLed does not use accounts, advertising, analytics, or tracking. Read the full <a href="./">DriftLed Privacy Policy</a>.</p>
                         </div>
                     </section>
                 </div>
@@ -713,7 +639,7 @@
 
     <footer>
         <p>© 2026 Code Solutions OÜ</p>
-        <p><a href="./support.html">DriftLed Support</a></p>
+        <p><a href="./">DriftLed Privacy Policy</a></p>
     </footer>
 </body>
 </html>
